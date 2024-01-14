@@ -1,0 +1,46 @@
+PODS:
+  - SnapSDK (2.5.0):
+    - SnapSDK/SCSDKCoreKit (= 2.5.0)
+    - SnapSDK/SCSDKCreativeKit (= 2.5.0)
+    - SnapSDK/SCSDKLoginKit (= 2.5.0)
+  - SnapSDK/SCSDKCoreKit (2.5.0)
+  - SnapSDK/SCSDKCreativeKit (2.5.0):
+    - SnapSDK/SCSDKCoreKit
+  - SnapSDK/SCSDKLoginKit (2.5.0):
+    - SnapSDK/SCSDKCoreKit
+  - URLImage (2.2.5):
+    - URLImage/Common (= 2.2.5)
+    - URLImage/DownloadManager (= 2.2.5)
+    - URLImage/FileIndex (= 2.2.5)
+    - URLImage/ImageDecoder (= 2.2.5)
+    - URLImage/Log (= 2.2.5)
+    - URLImage/PlainDatabase (= 2.2.5)
+    - URLImage/RemoteContentView (= 2.2.5)
+  - URLImage/Common (2.2.5)
+  - URLImage/DownloadManager (2.2.5):
+    - URLImage/Log
+  - URLImage/FileIndex (2.2.5):
+    - URLImage/Common
+    - URLImage/Log
+    - URLImage/PlainDatabase
+  - URLImage/ImageDecoder (2.2.5)
+  - URLImage/Log (2.2.5)
+  - URLImage/PlainDatabase (2.2.5)
+  - URLImage/RemoteContentView (2.2.5)
+
+DEPENDENCIES:
+  - SnapSDK
+  - URLImage
+
+SPEC REPOS:
+  trunk:
+    - SnapSDK
+    - URLImage
+
+SPEC CHECKSUMS:
+  SnapSDK: 7f9cff455207306ba63588026cbf7ed1a1a505c2
+  URLImage: 36a66c03ba2a9ccbbf06bc83431f2cef171008e8
+
+PODFILE CHECKSUM: 4c638b1cae9d593ecdd08880cc711051c6f150b8
+
+COCOAPODS: 1.12.1

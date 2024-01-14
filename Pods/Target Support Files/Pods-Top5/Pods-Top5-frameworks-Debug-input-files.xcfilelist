@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-Top5/Pods-Top5-frameworks.sh
+${BUILT_PRODUCTS_DIR}/URLImage/URLImage.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SnapSDK/SCSDKCoreKit/SCSDKCoreKit.framework/SCSDKCoreKit
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SnapSDK/SCSDKCreativeKit/SCSDKCreativeKit.framework/SCSDKCreativeKit
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SnapSDK/SCSDKLoginKit/SCSDKLoginKit.framework/SCSDKLoginKit

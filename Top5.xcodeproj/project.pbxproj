@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		431600762B3F831400211E59 /* InstagramShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431600752B3F831400211E59 /* InstagramShareView.swift */; };
+		4316007A2B3F834400211E59 /* InstagramSharingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431600792B3F834400211E59 /* InstagramSharingUtils.swift */; };
+		432E2A3A2B4F44B200514378 /* PickTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432E2A392B4F44B200514378 /* PickTitle.swift */; };
+		432E2A402B4F792D00514378 /* ChoosePhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432E2A3F2B4F792D00514378 /* ChoosePhotos.swift */; };
+		43492F1F2A7BE3700010FC2A /* Top5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F1E2A7BE3700010FC2A /* Top5App.swift */; };
+		43492F212A7BE3700010FC2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F202A7BE3700010FC2A /* ContentView.swift */; };
+		43492F232A7BE3710010FC2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43492F222A7BE3710010FC2A /* Assets.xcassets */; };
+		43492F262A7BE3710010FC2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43492F252A7BE3710010FC2A /* Preview Assets.xcassets */; };
+		43492F2D2A7BE3BE0010FC2A /* InstaSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F2C2A7BE3BE0010FC2A /* InstaSignUpView.swift */; };
+		43492F2F2A7BE3DE0010FC2A /* ChooseRankShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F2E2A7BE3DE0010FC2A /* ChooseRankShareView.swift */; };
+		43492F332A7BE41D0010FC2A /* SwiftRankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F322A7BE41D0010FC2A /* SwiftRankingView.swift */; };
+		43492F352A7BE43D0010FC2A /* SwiftRankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F342A7BE43D0010FC2A /* SwiftRankingViewModel.swift */; };
+		43492F372A7BE45C0010FC2A /* SwiftRankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F362A7BE45C0010FC2A /* SwiftRankingModel.swift */; };
+		43492F392A7BE4850010FC2A /* UziRankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F382A7BE4850010FC2A /* UziRankingView.swift */; };
+		43492F3B2A7BE4AE0010FC2A /* UziRankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F3A2A7BE4AE0010FC2A /* UziRankingViewModel.swift */; };
+		43492F3D2A7BE4C10010FC2A /* UziRankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F3C2A7BE4C10010FC2A /* UziRankingModel.swift */; };
+		43492F472A7D9FE30010FC2A /* ChooseRankShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F462A7D9FE30010FC2A /* ChooseRankShareViewModel.swift */; };
+		43492F4C2A7DB97C0010FC2A /* SwiftRankingCustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F4B2A7DB97C0010FC2A /* SwiftRankingCustomViews.swift */; };
+		43492F4E2A7DB9B00010FC2A /* UziRankingCustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F4D2A7DB9B00010FC2A /* UziRankingCustomViews.swift */; };
+		43492F502A7DB9F20010FC2A /* GeneralCustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F4F2A7DB9F20010FC2A /* GeneralCustomViews.swift */; };
+		438676E92B51D67700256E54 /* OwnRankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438676E82B51D67700256E54 /* OwnRankingView.swift */; };
+		438676EB2B51D8B600256E54 /* OwnRankingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438676EA2B51D8B600256E54 /* OwnRankingViewModel.swift */; };
+		43EEE4312B48B2BE007769BE /* OverallPickRanking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EEE4302B48B2BE007769BE /* OverallPickRanking.swift */; };
+		43EEE4452B49F00E007769BE /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EEE4442B49F00E007769BE /* TwitterService.swift */; };
+		43EEE4472B49F03A007769BE /* TwitterServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EEE4462B49F03A007769BE /* TwitterServiceView.swift */; };
+		43EEE4492B49F062007769BE /* TwitterServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EEE4482B49F062007769BE /* TwitterServiceViewModel.swift */; };
+		C3FB9E924AD0A2E2F452D709 /* Pods_Top5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4106BE8209E6D68AF2B9C605 /* Pods_Top5.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4106BE8209E6D68AF2B9C605 /* Pods_Top5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Top5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		431600752B3F831400211E59 /* InstagramShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramShareView.swift; sourceTree = "<group>"; };
+		431600792B3F834400211E59 /* InstagramSharingUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramSharingUtils.swift; sourceTree = "<group>"; };
+		432E2A392B4F44B200514378 /* PickTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickTitle.swift; sourceTree = "<group>"; };
+		432E2A3F2B4F792D00514378 /* ChoosePhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePhotos.swift; sourceTree = "<group>"; };
+		43492F1B2A7BE3700010FC2A /* Top5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Top5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43492F1E2A7BE3700010FC2A /* Top5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top5App.swift; sourceTree = "<group>"; };
+		43492F202A7BE3700010FC2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		43492F222A7BE3710010FC2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43492F252A7BE3710010FC2A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		43492F2C2A7BE3BE0010FC2A /* InstaSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaSignUpView.swift; sourceTree = "<group>"; };
+		43492F2E2A7BE3DE0010FC2A /* ChooseRankShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRankShareView.swift; sourceTree = "<group>"; };
+		43492F322A7BE41D0010FC2A /* SwiftRankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRankingView.swift; sourceTree = "<group>"; };
+		43492F342A7BE43D0010FC2A /* SwiftRankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRankingViewModel.swift; sourceTree = "<group>"; };
+		43492F362A7BE45C0010FC2A /* SwiftRankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRankingModel.swift; sourceTree = "<group>"; };
+		43492F382A7BE4850010FC2A /* UziRankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UziRankingView.swift; sourceTree = "<group>"; };
+		43492F3A2A7BE4AE0010FC2A /* UziRankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UziRankingViewModel.swift; sourceTree = "<group>"; };
+		43492F3C2A7BE4C10010FC2A /* UziRankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UziRankingModel.swift; sourceTree = "<group>"; };
+		43492F3E2A7C7EFE0010FC2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		43492F462A7D9FE30010FC2A /* ChooseRankShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRankShareViewModel.swift; sourceTree = "<group>"; };
+		43492F4B2A7DB97C0010FC2A /* SwiftRankingCustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRankingCustomViews.swift; sourceTree = "<group>"; };
+		43492F4D2A7DB9B00010FC2A /* UziRankingCustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UziRankingCustomViews.swift; sourceTree = "<group>"; };
+		43492F4F2A7DB9F20010FC2A /* GeneralCustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCustomViews.swift; sourceTree = "<group>"; };
+		438676E82B51D67700256E54 /* OwnRankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnRankingView.swift; sourceTree = "<group>"; };
+		438676EA2B51D8B600256E54 /* OwnRankingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnRankingViewModel.swift; sourceTree = "<group>"; };
+		43EEE4302B48B2BE007769BE /* OverallPickRanking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallPickRanking.swift; sourceTree = "<group>"; };
+		43EEE4442B49F00E007769BE /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
+		43EEE4462B49F03A007769BE /* TwitterServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterServiceView.swift; sourceTree = "<group>"; };
+		43EEE4482B49F062007769BE /* TwitterServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterServiceViewModel.swift; sourceTree = "<group>"; };
+		6642B9910AC7DC04A1B7CB8C /* Pods-Top5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Top5.debug.xcconfig"; path = "Target Support Files/Pods-Top5/Pods-Top5.debug.xcconfig"; sourceTree = "<group>"; };
+		C896353524150ECF7D203814 /* Pods-Top5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Top5.release.xcconfig"; path = "Target Support Files/Pods-Top5/Pods-Top5.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43492F182A7BE3700010FC2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FB9E924AD0A2E2F452D709 /* Pods_Top5.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B2E8CD9B6EA8E02D689E726 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4106BE8209E6D68AF2B9C605 /* Pods_Top5.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		432E2A382B4F449F00514378 /* CreateRanking */ = {
+			isa = PBXGroup;
+			children = (
+				432E2A392B4F44B200514378 /* PickTitle.swift */,
+				432E2A3F2B4F792D00514378 /* ChoosePhotos.swift */,
+				438676D52B50EABB00256E54 /* OwnRanking */,
+			);
+			path = CreateRanking;
+			sourceTree = "<group>";
+		};
+		43492F122A7BE3700010FC2A = {
+			isa = PBXGroup;
+			children = (
+				43492F1D2A7BE3700010FC2A /* Top5 */,
+				43492F1C2A7BE3700010FC2A /* Products */,
+				92F06873C063EED660A258D6 /* Pods */,
+				3B2E8CD9B6EA8E02D689E726 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		43492F1C2A7BE3700010FC2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43492F1B2A7BE3700010FC2A /* Top5.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43492F1D2A7BE3700010FC2A /* Top5 */ = {
+			isa = PBXGroup;
+			children = (
+				43492F3E2A7C7EFE0010FC2A /* Info.plist */,
+				43492F1E2A7BE3700010FC2A /* Top5App.swift */,
+				43492F222A7BE3710010FC2A /* Assets.xcassets */,
+				43492F4F2A7DB9F20010FC2A /* GeneralCustomViews.swift */,
+				43492F202A7BE3700010FC2A /* ContentView.swift */,
+				43492F2C2A7BE3BE0010FC2A /* InstaSignUpView.swift */,
+				43EEE4302B48B2BE007769BE /* OverallPickRanking.swift */,
+				432E2A382B4F449F00514378 /* CreateRanking */,
+				43492F482A7DA4970010FC2A /* ChooseRankShare */,
+				43492F412A7D9B560010FC2A /* Swift */,
+				43492F432A7D9B7B0010FC2A /* Uzi */,
+				43EEE4432B49EFAB007769BE /* Twitter */,
+				43EEE4412B49EF84007769BE /* Insta */,
+				43492F242A7BE3710010FC2A /* Preview Content */,
+			);
+			path = Top5;
+			sourceTree = "<group>";
+		};
+		43492F242A7BE3710010FC2A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				43492F252A7BE3710010FC2A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		43492F412A7D9B560010FC2A /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				43492F322A7BE41D0010FC2A /* SwiftRankingView.swift */,
+				43492F342A7BE43D0010FC2A /* SwiftRankingViewModel.swift */,
+				43492F362A7BE45C0010FC2A /* SwiftRankingModel.swift */,
+				43492F4B2A7DB97C0010FC2A /* SwiftRankingCustomViews.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		43492F432A7D9B7B0010FC2A /* Uzi */ = {
+			isa = PBXGroup;
+			children = (
+				43492F382A7BE4850010FC2A /* UziRankingView.swift */,
+				43492F3A2A7BE4AE0010FC2A /* UziRankingViewModel.swift */,
+				43492F3C2A7BE4C10010FC2A /* UziRankingModel.swift */,
+				43492F4D2A7DB9B00010FC2A /* UziRankingCustomViews.swift */,
+			);
+			path = Uzi;
+			sourceTree = "<group>";
+		};
+		43492F482A7DA4970010FC2A /* ChooseRankShare */ = {
+			isa = PBXGroup;
+			children = (
+				43492F2E2A7BE3DE0010FC2A /* ChooseRankShareView.swift */,
+				43492F462A7D9FE30010FC2A /* ChooseRankShareViewModel.swift */,
+			);
+			path = ChooseRankShare;
+			sourceTree = "<group>";
+		};
+		438676D52B50EABB00256E54 /* OwnRanking */ = {
+			isa = PBXGroup;
+			children = (
+				438676E82B51D67700256E54 /* OwnRankingView.swift */,
+				438676EA2B51D8B600256E54 /* OwnRankingViewModel.swift */,
+			);
+			path = OwnRanking;
+			sourceTree = "<group>";
+		};
+		43EEE4412B49EF84007769BE /* Insta */ = {
+			isa = PBXGroup;
+			children = (
+				431600752B3F831400211E59 /* InstagramShareView.swift */,
+				431600792B3F834400211E59 /* InstagramSharingUtils.swift */,
+			);
+			path = Insta;
+			sourceTree = "<group>";
+		};
+		43EEE4432B49EFAB007769BE /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				43EEE4462B49F03A007769BE /* TwitterServiceView.swift */,
+				43EEE4442B49F00E007769BE /* TwitterService.swift */,
+				43EEE4482B49F062007769BE /* TwitterServiceViewModel.swift */,
+			);
+			path = Twitter;
+			sourceTree = "<group>";
+		};
+		92F06873C063EED660A258D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6642B9910AC7DC04A1B7CB8C /* Pods-Top5.debug.xcconfig */,
+				C896353524150ECF7D203814 /* Pods-Top5.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43492F1A2A7BE3700010FC2A /* Top5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43492F292A7BE3710010FC2A /* Build configuration list for PBXNativeTarget "Top5" */;
+			buildPhases = (
+				F46D77F40D4A20E448CA1486 /* [CP] Check Pods Manifest.lock */,
+				43492F172A7BE3700010FC2A /* Sources */,
+				43492F182A7BE3700010FC2A /* Frameworks */,
+				43492F192A7BE3700010FC2A /* Resources */,
+				7E83958657A5393BCA2F1FFB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Top5;
+			productName = Top5;
+			productReference = 43492F1B2A7BE3700010FC2A /* Top5.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43492F132A7BE3700010FC2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					43492F1A2A7BE3700010FC2A = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 43492F162A7BE3700010FC2A /* Build configuration list for PBXProject "Top5" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43492F122A7BE3700010FC2A;
+			productRefGroup = 43492F1C2A7BE3700010FC2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43492F1A2A7BE3700010FC2A /* Top5 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43492F192A7BE3700010FC2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43492F262A7BE3710010FC2A /* Preview Assets.xcassets in Resources */,
+				43492F232A7BE3710010FC2A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E83958657A5393BCA2F1FFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Top5/Pods-Top5-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Top5/Pods-Top5-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Top5/Pods-Top5-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F46D77F40D4A20E448CA1486 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Top5-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43492F172A7BE3700010FC2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43492F4C2A7DB97C0010FC2A /* SwiftRankingCustomViews.swift in Sources */,
+				43492F212A7BE3700010FC2A /* ContentView.swift in Sources */,
+				43492F2D2A7BE3BE0010FC2A /* InstaSignUpView.swift in Sources */,
+				43492F392A7BE4850010FC2A /* UziRankingView.swift in Sources */,
+				43492F372A7BE45C0010FC2A /* SwiftRankingModel.swift in Sources */,
+				43EEE4312B48B2BE007769BE /* OverallPickRanking.swift in Sources */,
+				43492F4E2A7DB9B00010FC2A /* UziRankingCustomViews.swift in Sources */,
+				43492F472A7D9FE30010FC2A /* ChooseRankShareViewModel.swift in Sources */,
+				43EEE4452B49F00E007769BE /* TwitterService.swift in Sources */,
+				438676E92B51D67700256E54 /* OwnRankingView.swift in Sources */,
+				43492F352A7BE43D0010FC2A /* SwiftRankingViewModel.swift in Sources */,
+				43492F3D2A7BE4C10010FC2A /* UziRankingModel.swift in Sources */,
+				43492F1F2A7BE3700010FC2A /* Top5App.swift in Sources */,
+				43492F502A7DB9F20010FC2A /* GeneralCustomViews.swift in Sources */,
+				438676EB2B51D8B600256E54 /* OwnRankingViewModel.swift in Sources */,
+				432E2A3A2B4F44B200514378 /* PickTitle.swift in Sources */,
+				4316007A2B3F834400211E59 /* InstagramSharingUtils.swift in Sources */,
+				431600762B3F831400211E59 /* InstagramShareView.swift in Sources */,
+				43492F3B2A7BE4AE0010FC2A /* UziRankingViewModel.swift in Sources */,
+				432E2A402B4F792D00514378 /* ChoosePhotos.swift in Sources */,
+				43EEE4472B49F03A007769BE /* TwitterServiceView.swift in Sources */,
+				43EEE4492B49F062007769BE /* TwitterServiceViewModel.swift in Sources */,
+				43492F2F2A7BE3DE0010FC2A /* ChooseRankShareView.swift in Sources */,
+				43492F332A7BE41D0010FC2A /* SwiftRankingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		43492F272A7BE3710010FC2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		43492F282A7BE3710010FC2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43492F2A2A7BE3710010FC2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6642B9910AC7DC04A1B7CB8C /* Pods-Top5.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"Top5/Preview Content\"";
+				DEVELOPMENT_TEAM = Y2ZKVJ3N94;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Top5/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your ranking image to camera roll";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Christian-Bingley.TheTop5";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43492F2B2A7BE3710010FC2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C896353524150ECF7D203814 /* Pods-Top5.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"Top5/Preview Content\"";
+				DEVELOPMENT_TEAM = Y2ZKVJ3N94;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Top5/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your ranking image to camera roll";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Christian-Bingley.TheTop5";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43492F162A7BE3700010FC2A /* Build configuration list for PBXProject "Top5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43492F272A7BE3710010FC2A /* Debug */,
+				43492F282A7BE3710010FC2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43492F292A7BE3710010FC2A /* Build configuration list for PBXNativeTarget "Top5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43492F2A2A7BE3710010FC2A /* Debug */,
+				43492F2B2A7BE3710010FC2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43492F132A7BE3700010FC2A /* Project object */;
+}
