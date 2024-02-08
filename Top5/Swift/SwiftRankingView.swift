@@ -11,6 +11,8 @@ struct SwiftRankingView: View {
     
     @StateObject private var viewModel = SwiftRankingViewModel()
     
+    @State private var rotationAngle: Double = 0
+    
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     
     
@@ -33,41 +35,18 @@ struct SwiftRankingView: View {
                 VStack {
                     VStack {
                             if viewModel.showDoneButton && viewModel.areAllNumAndImageViewsFilled {
-                                HStack(spacing: UIScreen.main.bounds.width * 0.5) {
-                                    Button {
-                                        presentationMode.wrappedValue.dismiss()
-                                    } label: {
-                                        Text("Back")
-                                            .font(.system(.subheadline, weight: .bold))
-                                            .foregroundColor(.black)
-                                            .propotionalFrame(width: 0.2, height: 0.03)
-                                    }
-                                    .background {
-                                        Color.white
-                                    }
-                                    .cornerRadius(10)
+                                HStack {
                                     
-
-                                    Button {
-                                        let image = viewModel.imageToSave.asUIImage()
-                                        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-                                    } label: {
-                                        Text("Save")
-                                            .font(.system(.subheadline, weight: .bold))
-                                            .foregroundColor(.black)
-                                            .propotionalFrame(width: 0.2, height: 0.03)
-                                    }
-                                    .background {
-                                        Color.white
-                                    }
-                                    .cornerRadius(10)
+                                    BackButtonView()
+                                        .offset(x: UIScreen.main.bounds.width * -0.2, y: UIScreen.main.bounds.height * 0.01)
+                                    
                                     
                                     Button {
                                         withAnimation {
                                             viewModel.showingBox = false
+                                            viewModel.showShareButton = true
+                                            viewModel.showDoneButton = false
                                         }
-                                        viewModel.showShareButton = true
-                                        viewModel.showDoneButton = false
                                     } label: {
                                         Text("Done")
                                             .font(.system(.subheadline, weight: .bold))
@@ -78,45 +57,18 @@ struct SwiftRankingView: View {
                                         Color.white
                                     }
                                     .cornerRadius(10)
+                                    .offset(x: UIScreen.main.bounds.width * 0.2, y: UIScreen.main.bounds.height * 0.01)
                                     
                                 }
                             } else {
                                 
-                                HStack(spacing: UIScreen.main.bounds.width * 0.5) {
-                                    
-                                    Button {
-                                        presentationMode.wrappedValue.dismiss()
-                                    } label: {
-                                        Text("Back")
-                                            .font(.system(.subheadline, weight: .bold))
-                                            .foregroundColor(.black)
-                                            .propotionalFrame(width: 0.2, height: 0.03)
-                                    }
-                                    .background {
-                                        Color.white
-                                    }
-                                    .cornerRadius(10)
-                                    .offset(x: UIScreen.main.bounds.width * 0.015)
-                                    
-                                    if viewModel.showDoneButton && viewModel.areAllNumAndImageViewsFilled {
-                                        Button {
-                                            withAnimation {
-                                                viewModel.showingBox = false
-                                            }
-                                            viewModel.showShareButton = true
-                                            viewModel.showDoneButton = false
-                                        } label: {
-                                            Text("Done")
-                                                .font(.system(.subheadline, weight: .bold))
-                                                .foregroundColor(.black)
-                                                .propotionalFrame(width: 0.2, height: 0.03)
-                                        }
-                                        .background {
-                                            Color.white
-                                        }
-                                        .cornerRadius(10)
-                                    }
+                                if !viewModel.showDoneButton {
+                                    BackButtonView()
+                                } else {
+                                    BackButtonView()
+                                        .offset(x: UIScreen.main.bounds.width * -0.34)
                                 }
+
                             }
 
                                 Text("Brown University Best Dining Halls")
@@ -124,7 +76,24 @@ struct SwiftRankingView: View {
                                     .foregroundColor(.white)
                         
                         VStack {
-                            NumAndImageView(number: 1, words: $viewModel.one, theAlbums: $viewModel.theAlbums)
+                            ZStack {
+                                NumAndImageView(number: 1, words: $viewModel.one, theAlbums: $viewModel.theAlbums)
+                                
+                                if !viewModel.one.isEmpty {
+                                    Button {
+                                        //viewModel.theAlbums2.append(viewModel.one.first!)
+                                        viewModel.one.removeFirst()
+                                    } label: {
+                                        Image("X")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .propotionalFrame(width: 0.05, height: 0.05)
+                                    }
+                                    .offset(x: UIScreen.main.bounds.width
+                                            * 0.15, y: UIScreen.main.bounds.width
+                                            * -0.125)
+                                }
+                            }
                             NumAndImageView(number: 2, words: $viewModel.two, theAlbums: $viewModel.theAlbums)
                             NumAndImageView(number: 3, words: $viewModel.three, theAlbums: $viewModel.theAlbums)
                             NumAndImageView(number: 4, words: $viewModel.four, theAlbums: $viewModel.theAlbums)
@@ -189,6 +158,7 @@ struct SwiftRankingView: View {
                             Button {
                                 withAnimation {
                                     viewModel.showingBox.toggle()
+                                    rotationAngle += 180
                                 }
                             } label: {
                                 Image("down")
@@ -197,6 +167,7 @@ struct SwiftRankingView: View {
                                     .propotionalFrame(width: 0.05, height: 0.05)
                             }
                             .propotionalFrame(width: 0.8, height: 0.04)
+                            .rotationEffect(.degrees(rotationAngle))
                         }
                     }
 
@@ -205,10 +176,10 @@ struct SwiftRankingView: View {
                             Rectangle()
                                 .propotionalFrame(width: .infinity, height: 0.15)
                                 .foregroundColor(.white)
-                                .offset(y: UIScreen.main.bounds.height * 0.13)
+                                .offset(y: UIScreen.main.bounds.height * 0.15)
                             ZStack {
                                 ScrollView(.horizontal) {
-                                    HStack(spacing: 10) {
+                                    HStack(spacing: UIScreen.main.bounds.width * 0.03) {
                                         ForEach(viewModel.theAlbums, id: \.id) { album in
                                             Image(album.albumName)
                                                 .resizable()
@@ -228,16 +199,35 @@ struct SwiftRankingView: View {
                     
                 }
             }
+        /*
             .background {
                     Image("swift-concert")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .ignoresSafeArea()
             }
+         */
             .navigationBarBackButtonHidden(true)
             .blur(radius: viewModel.showModal ? 20 : 0)
             .overlay(
-                viewModel.showModal ? ModalView(showModal: $viewModel.showModal, showingSnap: $viewModel.showingSnap, showingInsta: $viewModel.showingInsta, showingTikTok: $viewModel.showingTikTok) : nil
+                viewModel.showModal ?
+                VStack  {
+                    ModalView(showModal: $viewModel.showModal, showingSnap: $viewModel.showingSnap, showingInsta: $viewModel.showingInsta, showingTikTok: $viewModel.showingTikTok)
+                    
+                    Button {
+                        let image = viewModel.imageToSave.asUIImage()
+                        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                    } label: {
+                        Text("Save")
+                            .font(.system(.subheadline, weight: .bold))
+                            .foregroundColor(.black)
+                            .propotionalFrame(width: 0.2, height: 0.03)
+                    }
+                    .background {
+                        Color.white
+                    }
+                    .cornerRadius(10)
+                } : nil
             
             )
     }
@@ -347,10 +337,23 @@ struct ShareRanking: View {
                 .font(.system(.title2, weight: .bold))
             Text(middleText)
                 .font(.system(.caption, weight: .light))
-            Image(imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .propotionalFrame(width: 0.7, height: 0.35)
+            
+            if imageName == "snap-share" {
+                SnapchatLoginView()
+                    .frame(width: UIScreen.main.bounds.width * 0.57, height: UIScreen.main.bounds.height * 0.05)
+                
+                Image(imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .propotionalFrame(width: 0.7, height: 0.35)
+                    .offset(x: UIScreen.main.bounds.width * 0.01)
+            } else {
+                Image(imageName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .propotionalFrame(width: 0.7, height: 0.35)
+                    .offset(x: UIScreen.main.bounds.width * 0.01)
+            }
             
         }
         .padding()

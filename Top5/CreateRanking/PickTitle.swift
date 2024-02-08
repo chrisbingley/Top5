@@ -14,6 +14,9 @@ struct PickTitle: View {
             LinearGradientView(color1: .orange, color2: .red)
             
             VStack {
+                BackButtonView()
+                    .offset(x: UIScreen.main.bounds.width * -0.34, y: UIScreen.main.bounds.height * -0.275 )
+                
                 Text("what are you ranking?")
                     .font(.title)
                     .foregroundColor(.white)
@@ -32,6 +35,7 @@ struct PickTitle: View {
                 ButtonView(nextView: ChoosePhotos(title: $title), buttonText: "Next")
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

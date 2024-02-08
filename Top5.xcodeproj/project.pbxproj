@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		431600762B3F831400211E59 /* InstagramShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431600752B3F831400211E59 /* InstagramShareView.swift */; };
 		4316007A2B3F834400211E59 /* InstagramSharingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431600792B3F834400211E59 /* InstagramSharingUtils.swift */; };
+		43166D4C2B5C59110044A9D7 /* RankingCustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43166D4B2B5C59110044A9D7 /* RankingCustomViews.swift */; };
 		432E2A3A2B4F44B200514378 /* PickTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432E2A392B4F44B200514378 /* PickTitle.swift */; };
 		432E2A402B4F792D00514378 /* ChoosePhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432E2A3F2B4F792D00514378 /* ChoosePhotos.swift */; };
 		43492F1F2A7BE3700010FC2A /* Top5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43492F1E2A7BE3700010FC2A /* Top5App.swift */; };
@@ -40,6 +41,7 @@
 		4106BE8209E6D68AF2B9C605 /* Pods_Top5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Top5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		431600752B3F831400211E59 /* InstagramShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramShareView.swift; sourceTree = "<group>"; };
 		431600792B3F834400211E59 /* InstagramSharingUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramSharingUtils.swift; sourceTree = "<group>"; };
+		43166D4B2B5C59110044A9D7 /* RankingCustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCustomViews.swift; sourceTree = "<group>"; };
 		432E2A392B4F44B200514378 /* PickTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickTitle.swift; sourceTree = "<group>"; };
 		432E2A3F2B4F792D00514378 /* ChoosePhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePhotos.swift; sourceTree = "<group>"; };
 		43492F1B2A7BE3700010FC2A /* Top5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Top5.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 				43492F1E2A7BE3700010FC2A /* Top5App.swift */,
 				43492F222A7BE3710010FC2A /* Assets.xcassets */,
 				43492F4F2A7DB9F20010FC2A /* GeneralCustomViews.swift */,
+				43166D4B2B5C59110044A9D7 /* RankingCustomViews.swift */,
 				43492F202A7BE3700010FC2A /* ContentView.swift */,
 				43492F2C2A7BE3BE0010FC2A /* InstaSignUpView.swift */,
 				43EEE4302B48B2BE007769BE /* OverallPickRanking.swift */,
@@ -352,6 +355,7 @@
 				43EEE4472B49F03A007769BE /* TwitterServiceView.swift in Sources */,
 				43EEE4492B49F062007769BE /* TwitterServiceViewModel.swift in Sources */,
 				43492F2F2A7BE3DE0010FC2A /* ChooseRankShareView.swift in Sources */,
+				43166D4C2B5C59110044A9D7 /* RankingCustomViews.swift in Sources */,
 				43492F332A7BE41D0010FC2A /* SwiftRankingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Top5/Preview Content\"";
 				DEVELOPMENT_TEAM = Y2ZKVJ3N94;
 				ENABLE_PREVIEWS = YES;
@@ -496,7 +500,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Christian-Bingley.TheTop5";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -512,7 +516,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Top5/Preview Content\"";
 				DEVELOPMENT_TEAM = Y2ZKVJ3N94;
 				ENABLE_PREVIEWS = YES;
@@ -528,7 +532,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.0;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Christian-Bingley.TheTop5";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

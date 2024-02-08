@@ -100,17 +100,6 @@ struct CirclesView: View {
     }
 }
 
-/*
-struct LittleCirclesView: View {
-    let color: Color
-    var body: some View {
-        Circle()
-            .foregroundColor(color)
-            .propotionalFrame(width: 0.05, height: 0.01)
-    }
-}
- */
-
 struct CellView<Content: View>: View {
     let albumName: String
     let numRankings: Int
@@ -144,6 +133,62 @@ struct CellView<Content: View>: View {
                         .font(.system(.title3, weight: .bold))
                         .lineLimit(1)
                         .offset(y: UIScreen.main.bounds.height * 0.044)
+                        .foregroundColor(.primary)
+                    
+                    NavigationLink {
+                        nextView
+                    } label: {
+                        Text("RANK")
+                            .font(.system(.headline, weight: .bold))
+                            .foregroundColor(.white)
+                            .background {
+                                LinearGradient(colors: [.red, .orange], startPoint: .leading, endPoint: .trailing)
+                                    .propotionalFrame(width: 0.4, height: 0.04)
+                                    .cornerRadius(30)
+                            }
+                    }
+                    .offset(y: UIScreen.main.bounds.height * 0.065)
+
+                }
+            }
+        }
+    }
+}
+
+struct DarkModeCellView<Content: View>: View {
+    let imageName: String
+    let numRankings: Int
+    let title: String
+    let nextView: Content
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 35)
+                .foregroundColor(.gray)
+                .opacity(0.8)
+                .propotionalFrame(width: 0.85, height: 0.25)
+            
+            ImageView(imageName: imageName, propFrameWidth: 0.83, propFrameHeight: 0.24)
+                .cornerRadius(35)
+            
+            ZStack {
+                RoundedBottomCorner(radius: 30)
+                    .foregroundColor(.white)
+                    .propotionalFrame(width: 0.83, height: 0.1)
+                    .offset(y: UIScreen.main.bounds.height * 0.07)
+                
+                VStack {
+                    Text("\(numRankings) 🔥")
+                        .font(.system(.caption, weight: .bold))
+                        .foregroundColor(.primary)
+                        .propotionalFrame(width: 0.26, height: 0.01)
+                        .lineLimit(1)
+                        .offset(x: UIScreen.main.bounds.width * 0.31, y: UIScreen.main.bounds.height * 0.035)
+                    
+                    Text(title)
+                        .font(.system(.title3, weight: .bold))
+                        .lineLimit(1)
+                        .offset(y: UIScreen.main.bounds.height * 0.044)
+                        .foregroundColor(.black)
                     
                     NavigationLink {
                         nextView
@@ -188,6 +233,32 @@ struct SliderTabView: View {
                 .tag(0)
                 
             CellView(albumName: "uzi-album", numRankings: 200000, title: "Best Songs from Pink Tape", nextView: UziRankingView())
+                .tabItem {
+                    Text("Page 2")
+                }
+                .tag(1)
+        }
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+        .tabViewStyle(.page)
+        .indexViewStyle(.page(backgroundDisplayMode: .interactive))
+    }
+}
+
+struct DarkModeSliderTabView: View {
+    init() {
+        UIPageControl.appearance().currentPageIndicatorTintColor = .white
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.white.withAlphaComponent(0.2)
+    }
+    var body: some View {
+        TabView {
+            DarkModeCellView(imageName: "the_ratty", numRankings: 1000000,
+                     title: "Brown University Best Dining Halls", nextView: SwiftRankingView())
+                .tabItem {
+                    Text("Page 1")
+                }
+                .tag(0)
+                
+            DarkModeCellView(imageName: "uzi-album", numRankings: 200000, title: "Best Songs from Pink Tape", nextView: UziRankingView())
                 .tabItem {
                     Text("Page 2")
                 }

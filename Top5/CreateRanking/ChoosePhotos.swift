@@ -20,6 +20,14 @@ struct ChoosePhotos: View {
             LinearGradientView(color1: .orange, color2: .red)
             
             VStack {
+                if !images.isEmpty {
+                    BackButtonView()
+                        .offset(x: UIScreen.main.bounds.width * -0.34, y: UIScreen.main.bounds.height * -0.3)
+                } else {
+                    BackButtonView()
+                        .offset(x: UIScreen.main.bounds.width * -0.34, y: UIScreen.main.bounds.height * -0.34)
+                }
+                
                 Text("now, pick your photos")
                     .font(.title)
                     .foregroundColor(.white)
@@ -59,6 +67,7 @@ struct ChoosePhotos: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

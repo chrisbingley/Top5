@@ -22,25 +22,16 @@ struct InstaSignUpView: View {
                 // gradient background
                 LinearGradientView(color1: .red, color2: .orange)
                 
-                VStack {
+                VStack(spacing: UIScreen.main.bounds.height * 0.1) {
                     
-                    VStack {
                         // T5 logo
-                        ImageView(imageName: "tf-1", propFrameWidth: 0.25, propFrameHeight: 0.25)
-                        
-                        Text("Connect to Snapchat")
-                            .font(.title2)
-                            .foregroundColor(.white)
-                        
-                        SnapchatLoginView()
-                            .offset(x: UIScreen.main.bounds.width * 0.2)
-                    }
-                    .offset(y: 100)
+                    ImageView(imageName: "tf-1", propFrameWidth: 0.25, propFrameHeight: 0.25)
                     
                     VStack {
                         Text("what's your Instagram username? 🤔")
                             .font(.title2)
                             .foregroundColor(.white)
+                            .bold()
                         
                         // text field that limits characters to max length of insta usernames
                         CharacterLimitedTextField(text: $instaUsername, characterLimit: characterLimit)
